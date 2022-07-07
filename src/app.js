@@ -2,7 +2,7 @@ const express = require("express");
 
 class App() {
     constructor() {
-
+        this.server = express();
     }
     middlewares() {
 
@@ -11,3 +11,5 @@ class App() {
 
     }
 }
+
+module.experts = new App().server;
