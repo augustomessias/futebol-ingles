@@ -1,0 +1,13 @@
+const express = require("express");
+
+class App() {
+    constructor() {
+
+    }
+    middlewares() {
+
+    }
+    routes() {
+
+    }
+}
