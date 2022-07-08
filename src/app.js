@@ -15,4 +15,4 @@ class App {
     }
 }
 
-module.experts = new App().server;
+module.exports = new App().server;

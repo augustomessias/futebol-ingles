@@ -3,9 +3,9 @@ const clubeService = require("../services/clubeService");
 const controller = {
     index: (req, res) => {
     
-    const listClube = clubeService.listClubeService;
+    const listClube = clubeService.listClubeService();
 
-    res.json(clube);
+    res.json(listClube);
     }
 }
 
