@@ -1,4 +1,5 @@
-function clubeModel(nome, anoDeFundacao, estadio, cores) {
+function clubeModel(id, nome, anoDeFundacao, estadio, cores) {
+    this.id = id;
     this.nome = nome;
     this.anoDeFundacao = anoDeFundacao;
     this.estadio = estadio;
