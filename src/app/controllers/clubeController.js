@@ -13,3 +13,5 @@ const controller = {
         res.json(clube);
     }
 }
+
+module.exports = controller;
