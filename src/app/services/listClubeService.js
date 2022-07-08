@@ -46,4 +46,4 @@ const listClubeService = {
     }
 }
 
-module.exports = clubeService;
+module.exports = listClubeService;
