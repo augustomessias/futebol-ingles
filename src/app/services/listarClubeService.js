@@ -40,8 +40,8 @@ const listarClubeService = {
         return [clube1, clube2];
     },
     listarClubeNome: (nome) => {
-        const todosOsClubes = clubeService.listarClubeService();
-        const clube = clubeList.find(item => item.nome === nome);
+        const clubes = listarClubeService.listarTodosClubes();
+        const clube = clubes.find(item => item.nome === nome);
         return clube;
     }
 }
