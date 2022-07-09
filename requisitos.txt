@@ -1,0 +1,12 @@
+Listagem de requisitos do projeto Futebol Inglês:
+
+1. Método [GET] para retornar dados de todos os clubes;
+2. Método [GET] para retornar apenas os dados de um único clube a partir do id;
+3. Método [POST] para criar um novo clube;
+4. Método [POST] para criar um novo elenco dentro de um clube existente;
+5. Método [POST] para incluir uma nova cor de uniforme dentro do array de cores de um clube;
+6. Método [PUT] para substituir todas as informações de um clube por outro;
+7. Método [PATCH] para alterar apenas o treinador de um clube existente;
+8. Método [PATCH] para alterar apenas o estádio de um clube existente;
+9. Método [PATCH] para alterar apenas um jogar do elenco de um determinado clube;
+10. Método [DELETE] para excluir toda uma equipe;
