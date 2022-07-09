@@ -1,7 +1,7 @@
 const clubeModel = require("../models/clubeModel");
 
-const listClubeService = {
-    listClubeService: () => {
+const listarClubeService = {
+    listarTodosClubes: () => {
         const clube1 = new clubeModel(
             1,
             "Arsenal",
@@ -39,11 +39,11 @@ const listClubeService = {
 
         return [clube1, clube2];
     },
-    listClubeData: (clubeNome) => {
-        const clubeList = clubeService.listClubeService();
+    listarClubeNome: (nome) => {
+        const todosOsClubes = clubeService.listarClubeService();
         const clube = clubeList.find(item => item.nome === nome);
         return clube;
     }
 }
 
-module.exports = listClubeService;
+module.exports = listarClubeService;

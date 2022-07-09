@@ -1,14 +1,14 @@
-const clubeService = require("../services/listClubeService");
+const clubeService = require("../services/listarClubeService");
 
 const controller = {
-    index: (req, res) => {
-        const listClube = clubeService.listClubeService();
-        res.json(listClube);
+    clubes: (req, res) => {
+        const clubes = clubeService.listarTodosClubes();
+        res.json(clubes);
     },
-    listData: (req, res) => {
+    clubeNome: (req, res) => {
         const { nome } = req.query;
-        const clube = clubeService.listClubeData(nome);
-        return res.json(clube);
+        const clubeNome = clubeService.listarClubeNome(nome);
+        return res.json(clubeNome);
     }
 }
 
