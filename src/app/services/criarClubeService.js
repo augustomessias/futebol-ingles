@@ -1,4 +1,5 @@
 const clubeModel = require("../models/clubeModel");
+const arrClubes = require("../database/dados");
 
 const criarClubeService = {
     criarClube: (
@@ -19,8 +20,7 @@ const criarClubeService = {
         treinador,
         elenco 
     );
-
-        return novoClube;
+        return arrClubes.push(novoClube);
     }
 }
 

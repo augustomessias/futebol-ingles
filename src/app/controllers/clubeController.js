@@ -1,8 +1,8 @@
 const criarClubeService = require("../services/criarClubeService");
 
 const clubeModel = require("../models/clubeModel");
-const clubeService = require("../services/clubeService");
-const arrClubes = require("../../database/database");
+const clubeService = require("../services/listarClubeService");
+const arrClubes = require("../database/dados");
 
 const controller = {
     clubes: (req, res) => {
