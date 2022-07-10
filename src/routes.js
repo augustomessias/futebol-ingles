@@ -5,6 +5,7 @@ const controller = require("./app/controllers/clubeController");
 
 routes.get("/clubes", controller.clubes);
 routes.get("/clubenome", controller.clubeNome);
-routes.get("/clubeid/:id", controller.clubeId);
+routes.get("/clubeid", controller.clubeId);
+routes.post("/novoclube", controller.novoClube);
 
 module.exports = routes;
