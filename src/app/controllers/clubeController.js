@@ -1,4 +1,4 @@
-const clubeService = require("../services/listarClubeService");
+const clubeService = require("../services/clubeService");
 
 const controller = {
     clubes: (req, res) => {
@@ -9,6 +9,11 @@ const controller = {
         const { nome } = req.query;
         const clubeNome = clubeService.listarClubeNome(nome);
         return res.json(clubeNome);
+    },
+    clubeId: (req, res) => {
+        const { id } = req.query;
+        const clubeId = clubeService.listarClubeId(id);
+        return res.json(clubeId);
     }
 }
 
