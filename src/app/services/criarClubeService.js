@@ -2,7 +2,7 @@ const clubeModel = require("../models/clubeModel");
 const arrClubes = require("../database/dados");
 
 const criarClubeService = {
-    criarClube: (
+    criarNovoClube: (
         id,
         nome,
         anoDeFundacao,
@@ -20,7 +20,7 @@ const criarClubeService = {
         treinador,
         elenco 
     );
-        return arrClubes.push(novoClube);
+        return novoClube;
     }
 }
 

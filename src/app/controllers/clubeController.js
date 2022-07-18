@@ -5,14 +5,13 @@ const criarClubeService = require("../services/criarClubeService");
 const excluirClubeService = require("../services/excluirClubeService");
 const listarClubeService = require("../services/listarClubeService");
 const arrClubes = require("../database/dados");
-const { response } = require("express");
 
 const controller = {
     todosClubes: (req, res) => {
         const clubes = listarClubeService.listarTodosOsClubes();
         res.json(clubes);
     },
-    listarClubeNome: (req, res) => {
+    clubeNome: (req, res) => {
         const { nome } = req.query;
 
         if(!nome) {
@@ -22,7 +21,7 @@ const controller = {
         const clube = listarClubeService.listarClubePeloNome(nome);
         return res.json(clube);
     },
-    listarClubeId: (req, res) => {
+    clubeId: (req, res) => {
         const { id } = req.query;
         
         if(!id) {
@@ -32,11 +31,26 @@ const controller = {
         const clube = listarClubeService.listarClubePeloId(id);
         return res.json(clube);
     },
-    criarNovoClube: (req, res) => {
-        const { id, nome, anoDeFundacao, estadio, cores, treinador, elenco } = req.query;
-        const novoClube = new clubeModel(id, nome, anoDeFundacao, estadio, cores, treinador, elenco);
-        arrClubes.push(novoClube);
-        return res.json(novoClube);
+    novoClube: (req, res) => {
+        const { id,
+            nome,
+            anoDeFundacao,
+            estadio,
+            cores,
+            treinador,
+            elenco
+        } = req.query;
+        
+        const clube = criarClubeService.criarNovoClube(
+            nome,
+            anoDeFundacao,
+            estadio,
+            cores,
+            treinador,
+            elenco
+        );
+        
+        return res.json(clube);
     }
 }
 
