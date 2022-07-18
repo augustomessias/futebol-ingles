@@ -2,15 +2,15 @@ const clubeModel = require("../models/clubeModel");
 const arrClubes = require("../database/dados");
 
 const listarClubeService = {
-    listarTodosClubes: () => {
+    listarTodosOsClubes: () => {
         return arrClubes;
     },
-    listarClubeNome: (clubeNome) => {
+    listarClubePeloNome: (clubeNome) => {
         const clubes = clubeService.listarTodosClubes();
         const clube = clubes.find(item => item.nome === clubeNome);
         return clube;
     },
-    listarClubeId: (clubeId) => {
+    listarClubePeloId: (clubeId) => {
         const clubes = clubeService.listarTodosClubes();
         const clube = clubes.find(item => item.id === clubeId);
         return clube;

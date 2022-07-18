@@ -1,4 +1,12 @@
-function clubeModel(id, nome, anoDeFundacao, estadio, cores, treinador, elenco) {
+function clubeModel(
+    id,
+    nome,
+    anoDeFundacao,
+    estadio,
+    cores,
+    treinador,
+    elenco
+    ) {
     this.id = id;
     this.nome = nome;
     this.anoDeFundacao = anoDeFundacao;

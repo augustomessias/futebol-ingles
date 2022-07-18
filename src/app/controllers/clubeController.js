@@ -1,12 +1,14 @@
-const criarClubeService = require("../services/criarClubeService");
-
 const clubeModel = require("../models/clubeModel");
-const clubeService = require("../services/listarClubeService");
+
+const atualizarClubeService = require("../services/atualizarClubeService");
+const criarClubeService = require("../services/criarClubeService");
+const excluirClubeService = require("../services/excluirClubeService");
+const listarClubeService = require("../services/listarClubeService");
 const arrClubes = require("../database/dados");
 
 const controller = {
-    clubes: (req, res) => {
-        const clubes = clubeService.listarTodosClubes();
+    todosClubes: (req, res) => {
+        const clubes = listarClubeService.listarTodosOsClubes();
         res.json(clubes);
     },
     clubeNome: (req, res) => {
