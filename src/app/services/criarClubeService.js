@@ -20,6 +20,7 @@ const criarClubeService = {
         treinador,
         elenco 
     );
+        arrClubes.push(novoClube);
         return novoClube;
     }
 }

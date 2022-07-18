@@ -15,7 +15,7 @@ const controller = {
         const { nome } = req.query;
 
         if(!nome) {
-            return response.status(400).json({ "erro": "O nome do clube não foi fornecido." })
+            return res.status(400).json({ "erro": "O nome do clube não foi fornecido." })
         }
 
         const clube = listarClubeService.listarClubePeloNome(nome);
@@ -25,7 +25,7 @@ const controller = {
         const { id } = req.query;
         
         if(!id) {
-            return response.status(400).json({ "erro": "O id do clube não foi fornecido." });
+            return res.status(400).json({ "erro": "O id do clube não foi fornecido." });
         }
 
         const clube = listarClubeService.listarClubePeloId(id);
@@ -49,7 +49,7 @@ const controller = {
             treinador,
             elenco
         );
-        
+
         return res.json(clube);
     }
 }
