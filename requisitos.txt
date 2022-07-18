@@ -1,8 +1,8 @@
 Listagem de requisitos do projeto Futebol Inglês:
 
 OK, 1. Método [GET] para retornar dados de todos os clubes;
-2. Método [GET] para retornar apenas os dados de um único clube a partir do nome;
-3. Método [GET] para retornar apenas os dados de um único clube a partir do id;
+OK, 2. Método [GET] para retornar apenas os dados de um único clube a partir do nome;
+OK, 3. Método [GET] para retornar apenas os dados de um único clube a partir do id;
 4. Método [POST] para criar um novo clube;
 5. Método [POST] para criar um novo elenco dentro de um clube existente;
 6. Método [POST] para incluir uma nova cor de uniforme dentro do array de cores de um clube;

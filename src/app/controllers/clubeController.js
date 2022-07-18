@@ -12,7 +12,7 @@ const controller = {
         const clubes = listarClubeService.listarTodosOsClubes();
         res.json(clubes);
     },
-    clubeNome: (req, res) => {
+    listarClubeNome: (req, res) => {
         const { nome } = req.query;
 
         if(!nome) {
@@ -22,12 +22,17 @@ const controller = {
         const clube = listarClubeService.listarClubePeloNome(nome);
         return res.json(clube);
     },
-    clubeId: (req, res) => {
+    listarClubeId: (req, res) => {
         const { id } = req.query;
-        const clubeId = clubeService.listarClubeId(id);
-        return res.json(clubeId);
+        
+        if(!id) {
+            return response.status(400).json({ "erro": "O id do clube não foi fornecido." });
+        }
+
+        const clube = listarClubeService.listarClubePeloId(id);
+        return res.json(clube);
     },
-    novoClube: (req, res) => {
+    criarNovoClube: (req, res) => {
         const { id, nome, anoDeFundacao, estadio, cores, treinador, elenco } = req.query;
         const novoClube = new clubeModel(id, nome, anoDeFundacao, estadio, cores, treinador, elenco);
         arrClubes.push(novoClube);
