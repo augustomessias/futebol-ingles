@@ -5,6 +5,7 @@ const criarClubeService = require("../services/criarClubeService");
 const excluirClubeService = require("../services/excluirClubeService");
 const listarClubeService = require("../services/listarClubeService");
 const arrClubes = require("../database/dados");
+const { response } = require("express");
 
 const controller = {
     todosClubes: (req, res) => {
@@ -13,8 +14,13 @@ const controller = {
     },
     clubeNome: (req, res) => {
         const { nome } = req.query;
-        const clubeNome = clubeService.listarClubeNome(nome);
-        return res.json(clubeNome);
+
+        if(!nome) {
+            return response.status(400).json({ "erro": "O nome do clube não foi fornecido." })
+        }
+
+        const clube = listarClubeService.listarClubePeloNome(nome);
+        return res.json(clube);
     },
     clubeId: (req, res) => {
         const { id } = req.query;
